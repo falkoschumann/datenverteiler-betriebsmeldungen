@@ -1,0 +1,28 @@
+ ------
+ Introduction
+ ------
+ Falko Schumann
+ ------
+ 2015-11-18
+ ------
+
+
+Funktionsbibliothek Betriebsmeldungen
+
+
+  Die Funktionsbibliothek Betriebsmeldungen soll die Nutzung der Betriebsmeldungsverwaltung der BSVRZ-Software
+  vereinfachen.
+
+
+* Funktionen
+
+  * Erstellen von Betriebsmeldungen als POJOs (Plain old Java Objects) direkt oder mit Hilfe einer Fabrik.
+
+  * Senden von Betriebsmeldungen über eine Schnittstelle anstelle des Singletons der API der
+    Datenverteiler-Applikationsfunktionen.
+
+
+* Verwendung
+
+  Allgemeine Hinweise zur Verwendung der Funktionsbibliothek Betriebsmeldungen finden sich auf der
+  {{{./usage.html}Seite Verwendung}}.

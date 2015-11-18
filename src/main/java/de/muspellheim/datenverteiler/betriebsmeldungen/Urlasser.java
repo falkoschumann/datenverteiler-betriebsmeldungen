@@ -1,9 +1,20 @@
+/*
+ * Copyright (c) 2015 Falko Schumann
+ * Released under the terms of the MIT License.
+ */
+
 package de.muspellheim.datenverteiler.betriebsmeldungen;
 
 import de.bsvrz.dav.daf.main.config.SystemObject;
 
 import java.util.Objects;
 
+/**
+ * Die Urlasserinformation einer Betriebsmeldung.
+ *
+ * @author Falko Schumann
+ * @since 1.0
+ */
 public class Urlasser implements Cloneable {
 
     private SystemObject benutzer;
@@ -64,7 +75,7 @@ public class Urlasser implements Cloneable {
         try {
             return (Urlasser) super.clone();
         } catch (CloneNotSupportedException ex) {
-            throw new IllegalStateException(ex);
+            throw new IllegalStateException("Ein Urlasser muss klonbar sein.", ex);
         }
     }
 

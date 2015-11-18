@@ -1,0 +1,6 @@
+-exportcontents: \
+    de.muspellheim.datenverteiler.betriebsmeldungen
+-sources: true
+
+Bundle-Name: Funktionsbibliothek Betriebsmeldungen
+Bundle-SymbolicName: de.muspellheim.datenverteiler.betriebsmeldungen

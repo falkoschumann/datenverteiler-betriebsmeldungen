@@ -1,0 +1,36 @@
+ ------
+ Usage
+ ------
+ Falko Schumann
+ ------
+ 2015-11-18
+ ------
+
+
+Verwendung
+
+  Die Schnittstelle <<<Betriebsmeldungsverwaltung>>> wird zur Kommunikation mit der SW-Einheit
+  Betriebsmeldungsverwaltung verwendet. Mit der <<<BetriebsmeldungFabrik>>> kann eine neue Betriebsmeldung erstellt
+  werden. Die Methoden der Fabrik können verkettet werden, so dass eine sehr kurze Schreibweise möglich ist, wie sie das
+  folgende Beispiel zeigt.
+
++-------------------------------------------------------------------------------
+import static de.muspellheim.datenverteiler.betriebsmeldungen.BetriebsmeldungFabrik.system;
+
+[...]
+
+Betriebsmeldungsverwaltung bmv = ...
+SystemObject sm = ...
+bmv.sende(system().referenz(sm).text("Steuermodul kaputt.").erzeuge());
++-------------------------------------------------------------------------------
+
+  Die <<<BetriebsmeldungFabrik>>> hat zwei statische Konstruktoren <<<fach()>>> und <<<system()>>> für den jeweiligen
+  Meldungstyp. Die Fabrik vereinfacht die Erstellung von Betriebsmeldungen durch folgende Annahmen:
+
+  * Der Status einer Meldung ist initial <Meldung>.
+
+  * Eine fachliche Meldung hat initial die Klasse <Information>.
+
+  * Eine Systemmeldung hat initial die Klasse <Warnung>.
+
+  * Die PID eines referenzierten Objekts wird auch als Meldungs-ID verwendet.

@@ -1,13 +1,24 @@
+/*
+ * Copyright (c) 2015 Falko Schumann
+ * Released under the terms of the MIT License.
+ */
+
 package de.muspellheim.datenverteiler.betriebsmeldungen;
 
 import de.bsvrz.dav.daf.main.config.SystemObject;
 
 import java.util.Objects;
 
+/**
+ * Eine Betriebsmeldung.
+ *
+ * @author Falko Schumann
+ * @since 1.0
+ */
 public class Betriebsmeldung implements Cloneable {
 
-    private Long applikationsId;
-    private Long laufendeNummer;
+    private long applikationsId;
+    private long laufendeNummer;
     private SystemObject applikationstyp;
     private String applikationskennung;
     private String id;
@@ -17,21 +28,21 @@ public class Betriebsmeldung implements Cloneable {
     private SystemObject referenz;
     private Meldungsstatus status;
     private String text;
-    private Urlasser urlasser;
+    private Urlasser urlasser = new Urlasser();
 
-    public Long getApplikationsId() {
+    public long getApplikationsId() {
         return applikationsId;
     }
 
-    public void setApplikationsId(Long applikationsId) {
+    public void setApplikationsId(long applikationsId) {
         this.applikationsId = applikationsId;
     }
 
-    public Long getLaufendeNummer() {
+    public long getLaufendeNummer() {
         return laufendeNummer;
     }
 
-    public void setLaufendeNummer(Long laufendeNummer) {
+    public void setLaufendeNummer(long laufendeNummer) {
         this.laufendeNummer = laufendeNummer;
     }
 
@@ -136,7 +147,8 @@ public class Betriebsmeldung implements Cloneable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(applikationsId, laufendeNummer, applikationstyp, applikationskennung, id, typ, typzusatz, klasse, referenz, status, text, urlasser);
+        return Objects.hash(applikationsId, laufendeNummer, applikationstyp, applikationskennung, id, typ, typzusatz,
+                klasse, referenz, status, text, urlasser);
     }
 
     @Override
@@ -163,7 +175,7 @@ public class Betriebsmeldung implements Cloneable {
         try {
             return (Betriebsmeldung) super.clone();
         } catch (CloneNotSupportedException ex) {
-            throw new IllegalStateException(ex);
+            throw new IllegalStateException("Eine Betriebsmeldung muss klonbar sein.", ex);
         }
     }
 

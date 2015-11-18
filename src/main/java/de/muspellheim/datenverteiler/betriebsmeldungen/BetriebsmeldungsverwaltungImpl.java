@@ -1,12 +1,44 @@
+/*
+ * Copyright (c) 2015 Falko Schumann
+ * Released under the terms of the MIT License.
+ */
+
 package de.muspellheim.datenverteiler.betriebsmeldungen;
 
+import de.bsvrz.dav.daf.main.ClientDavParameters;
 import de.bsvrz.sys.funclib.operatingMessage.*;
 
+import java.util.Objects;
+
+/**
+ * Die Defaultimplementierung der Betriebsmeldungsverwaltungsschnittstelle.
+ *
+ * @author Falko Schumann
+ * @since 1.0
+ */
 public class BetriebsmeldungsverwaltungImpl implements Betriebsmeldungsverwaltung {
+
+    /* TODO MessageSender ersetzen?
+     * Der MessageSender sendet keine Meldungen, wenn er nicht initialisiert
+     * ist, puffert sie aber auch nicht für ein späteres senden.
+     */
+
 
     private final MessageSender sender;
 
     public BetriebsmeldungsverwaltungImpl(String applikationskennung) {
+        Objects.requireNonNull(applikationskennung, "applikationskennung");
+
+        sender = MessageSender.getInstance();
+        sender.setApplicationLabel(applikationskennung);
+    }
+
+    public BetriebsmeldungsverwaltungImpl(Class<?> mainKlasse, ClientDavParameters parameter) {
+        Objects.requireNonNull(mainKlasse, "mainKlasse");
+
+        String applikationskennung = mainKlasse.getSimpleName();
+        if (parameter != null && !parameter.getIncarnationName().isEmpty())
+            applikationskennung += ": " + parameter.getIncarnationName();
         sender = MessageSender.getInstance();
         sender.setApplicationLabel(applikationskennung);
     }
