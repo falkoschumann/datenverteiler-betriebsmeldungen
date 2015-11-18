@@ -10,8 +10,8 @@
 
     <name>Funktionsbibliothek Betriebsmeldungen</name>
     <description>
-Die Funktionsbibliothek Betriebsmeldungen soll die Nutzung der
-Betriebsmeldungsverwaltung der BSVRZ-Software vereinfachen.
+        Die Funktionsbibliothek Betriebsmeldungen soll die Nutzung der Betriebsmeldungsverwaltung der BSVRZ-Software
+        vereinfachen.
     </description>
     <url>https://github.com/falkoschumann/datenverteiler-betriebsmeldungen</url>
     <inceptionYear>2015</inceptionYear>
@@ -375,5 +375,5 @@ Betriebsmeldungsverwaltung der BSVRZ-Software vereinfachen.
             </plugin>
         </plugins>
     </reporting>
-    
+
 </project>
