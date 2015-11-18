@@ -1,4 +1,4 @@
-Funktionsbibliothek Betriebsmeldungen [![Build Status](https://travis-ci.org/falkoschumann/datenverteiler-betriebsmeldungen.svg?branch=develop)](https://travis-ci.org/falkoschumann/datenverteiler-betriebsmeldungen)
+Funktionsbibliothek Betriebsmeldungen [![Build Status](https://travis-ci.org/falkoschumann/datenverteiler-betriebsmeldungen.svg?branch=master)](https://travis-ci.org/falkoschumann/datenverteiler-betriebsmeldungen)
 =====================================
 
 Die Funktionsbibliothek Betriebsmeldungen soll die Nutzung der
