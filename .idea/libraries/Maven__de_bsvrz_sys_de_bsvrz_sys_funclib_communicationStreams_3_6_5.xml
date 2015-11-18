@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: de.bsvrz.sys:de.bsvrz.sys.funclib.communicationStreams:3.6.5">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/bsvrz/sys/de.bsvrz.sys.funclib.communicationStreams/3.6.5/de.bsvrz.sys.funclib.communicationStreams-3.6.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/de/bsvrz/sys/de.bsvrz.sys.funclib.communicationStreams/3.6.5/de.bsvrz.sys.funclib.communicationStreams-3.6.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/bsvrz/sys/de.bsvrz.sys.funclib.communicationStreams/3.6.5/de.bsvrz.sys.funclib.communicationStreams-3.6.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
