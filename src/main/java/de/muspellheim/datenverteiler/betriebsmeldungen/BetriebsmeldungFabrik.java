@@ -143,4 +143,11 @@ public class BetriebsmeldungFabrik {
         return betriebsmeldung.clone();
     }
 
+    @Override
+    public String toString() {
+        return "BetriebsmeldungFabrik{" +
+                "betriebsmeldung=" + betriebsmeldung +
+                '}';
+    }
+
 }
