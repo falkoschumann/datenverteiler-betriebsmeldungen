@@ -17,6 +17,8 @@ import java.util.Objects;
  */
 public class Urlasser implements Cloneable {
 
+    public static final Urlasser NULL = new Urlasser();
+
     private SystemObject benutzer;
     private String ursache;
     private String veranlasser;
@@ -45,6 +47,10 @@ public class Urlasser implements Cloneable {
         this.veranlasser = veranlasser;
     }
 
+    public boolean isNull() {
+        return Objects.isNull(benutzer) && Objects.isNull(ursache) && Objects.isNull(veranlasser);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -62,12 +68,11 @@ public class Urlasser implements Cloneable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Urlasser{");
-        sb.append("benutzer=").append(benutzer);
-        sb.append(", ursache='").append(ursache).append('\'');
-        sb.append(", veranlasser='").append(veranlasser).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Urlasser{" +
+                "benutzer=" + benutzer +
+                ", ursache='" + ursache + '\'' +
+                ", veranlasser='" + veranlasser + '\'' +
+                '}';
     }
 
     @Override

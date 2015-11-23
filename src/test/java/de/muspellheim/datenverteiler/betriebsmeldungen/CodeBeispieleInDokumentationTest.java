@@ -20,5 +20,4 @@ public class CodeBeispieleInDokumentationTest {
         bmv.sende(system().referenz(sm).text("Steuermodul kaputt.").erzeuge());
     }
 
-
 }

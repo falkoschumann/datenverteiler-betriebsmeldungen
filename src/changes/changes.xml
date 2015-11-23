@@ -21,6 +21,11 @@
         Die Methode BetriebsmeldungFabrik::toString() liefert jetzt die
     Betriebsmeldung die erstellt wird zurück.
             </action>
+            <action dev="falkoschumann" type="fix" issue="2">
+        Der Urlasser einer Betriebsmeldung hat jetzt ein Nullobjekt als
+    Defaultwert, womit Benutzer, Ursache und Veranlasser jetzt mit Defaultwerten
+    belegt werden.
+            </action>
         </release>
 
         <release version="1.0.0" date="2015-11-18" description="Erste Veröffentlichung">
