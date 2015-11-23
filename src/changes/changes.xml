@@ -16,6 +16,13 @@
     </properties>
 
     <body>
+        <release version="1.0.1" date="2015-11-23" description="Bugfixes">
+            <action dev="falkoschumann" type="fix" issue="1">
+        Die Methode BetriebsmeldungFabrik::toString() liefert jetzt die
+    Betriebsmeldung die erstellt wird zurück.
+            </action>
+        </release>
+
         <release version="1.0.0" date="2015-11-18" description="Erste Veröffentlichung">
             <action dev="falkoschumann" type="add">
         Senden von Betriebsmeldungen mit Hilfe einer Schnittstelle und einer
