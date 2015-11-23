@@ -100,7 +100,7 @@ public class BetriebsmeldungsverwaltungImpl implements Betriebsmeldungsverwaltun
     }
 
     private MessageCauser causer(Urlasser urlasser) {
-        if (urlasser == null) return null;
+        if (urlasser.isNull()) return null;
         return new MessageCauser(urlasser.getBenutzer(), urlasser.getUrsache(), urlasser.getVeranlasser());
     }
 
