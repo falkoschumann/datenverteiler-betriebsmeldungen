@@ -31,17 +31,17 @@ public class Betriebsmeldungssender implements StandardApplication {
     public void initialize(ClientDavInterface connection) throws Exception {
         Betriebsmeldungsverwaltung bmv = new BetriebsmeldungsverwaltungImpl(Betriebsmeldung.class, connection.getClientDavParameters());
 
-        Betriebsmeldung fachmeldung = BetriebsmeldungFabrik.fach()
-                .referenz(connection.getLocalConfigurationAuthority())
-                .text("Lorem ipsum.")
-                .erzeuge();
+        Betriebsmeldung fachmeldung = BetriebsmeldungFabrik.fach().
+                referenz(connection.getLocalConfigurationAuthority()).
+                text("Lorem ipsum.").
+                erzeuge();
         bmv.sende(fachmeldung);
 
-        Betriebsmeldung systemmeldung = BetriebsmeldungFabrik.system()
-                .aenderungsmeldung()
-                .referenz(connection.getLocalApplicationObject())
-                .text("Lorem ipsum.")
-                .erzeuge();
+        Betriebsmeldung systemmeldung = BetriebsmeldungFabrik.system().
+                aenderungsmeldung().
+                referenz(connection.getLocalApplicationObject()).
+                text("Lorem ipsum.").
+                erzeuge();
         bmv.sende(systemmeldung);
 
         System.exit(0);
